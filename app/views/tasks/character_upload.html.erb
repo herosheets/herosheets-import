@@ -1,0 +1,58 @@
+<h1>Upload Class File (csv)</h1>
+
+<h2>Test a class file CSV here</h2>
+<p>
+  Thanks for helping add data to HeroSheets! This is a somewhat manual process,
+  so please read the instructions carefully to ensure your content gets added
+  correctly.
+
+  <ol>
+    <li>
+      First, use
+      <a href="https://docs.google.com/spreadsheets/d/1HjH2zC_-mFwpkahkJtHn9y0MS97g0BkrJILSm6QF29w/edit?usp=sharing">
+        this google doc
+      </a>
+      as a template for your CSV. Just copy the doc into your personal Google Docs account
+      for each class you want to add. Hopefully the class file you're uploading has a
+      D20PFSRD table. If not, you'll have to copy the example provided instead of using IMPORTHTML.
+
+      Otherwise, click on cell A10 and just change the URL to the correct one for your class.
+
+      If it doesn't show up, you may need to fiddle with the table number (the last argument
+      to IMPORTHTML) until you find the correct table.
+    </li>
+    <li>
+      Next, save this to your hard drive as a csv.
+    </li>
+    <li>
+      Upload the CSV you saved below. It will print out errors if something is wrong.
+      If nothing is wrong, it will show you at least 5 files it generated and say
+      "This file looks good!". That means you can send it on to me for importing
+      into HeroSheets.
+    </li>
+  </ol>
+
+</p>
+
+<% if @text && @text[:exceptions] %>
+    <div>
+      <% @text[:exceptions].each do |v| %>
+        <h3><%= v %></h3>
+      <% end %>
+    </div>
+    <% if @text[:facts] %>
+        <h3>Parsed Class Facts</h3>
+        <ul>
+          <% @text[:facts].keys.each do |k| %>
+          <li><strong><%= k %>:</strong> <%= @text[:facts][k] %></li>
+          <% end %>
+        </ul>
+    <% end %>
+<% end %>
+
+<%= form_tag({action: "validate_heroclass" }, multipart: true) do %>
+    <%= file_field_tag 'csv' %>
+    <%= submit_tag "Verify class file"%>
+
+<% end %>
+<%= link_to 'Cancel', tasks_path, class: 'btn btn-danger' %>

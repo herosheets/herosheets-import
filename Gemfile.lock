@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/jsomara/pfrpg_classes.git
+  revision: f07ffb55cb6986cdde6025b59cdec599618c47d6
+  specs:
+    pfrpg_classes (0.0.3)
+      rails (~> 4.1.1)
+
+GIT
+  remote: https://github.com/jsomara/pfrpg_tables.git
+  revision: 03d95cb29349ac7ed2beef4d98f6b78b5647854d
+  specs:
+    pfrpg_tables (0.0.2)
+      rails (~> 4.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,11 +71,7 @@ GEM
       mini_portile (~> 0.6.0)
     nokogumbo (1.1.13)
       nokogiri
-    pfrpg_classes (0.0.3)
-      rails (~> 4.1.1)
     pfrpg_import (0.0.2)
-      rails (~> 4.1.1)
-    pfrpg_tables (0.0.2)
       rails (~> 4.1.1)
     polymer-paper-rails (0.2.0)
       polymer-rails (~> 0.2.2)
@@ -127,9 +137,9 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pfrpg_classes
+  pfrpg_classes!
   pfrpg_import
-  pfrpg_tables
+  pfrpg_tables!
   polymer-paper-rails
   polymer-rails
   rails (= 4.1.7)

@@ -22,8 +22,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'pfrpg_import'
-gem 'pfrpg_tables'
-gem 'pfrpg_classes'
+gem 'pfrpg_tables', :git => 'https://github.com/jsomara/pfrpg_tables.git'
+gem 'pfrpg_classes', :git => 'https://github.com/jsomara/pfrpg_classes.git'
 
 gem 'polymer-rails'
 gem 'polymer-paper-rails'

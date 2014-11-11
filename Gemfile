@@ -25,8 +25,6 @@ gem 'pfrpg_import'
 gem 'pfrpg_tables', :git => 'https://github.com/jsomara/pfrpg_tables.git'
 gem 'pfrpg_classes', :git => 'https://github.com/jsomara/pfrpg_classes.git'
 
-gem 'polymer-rails'
-gem 'polymer-paper-rails'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
